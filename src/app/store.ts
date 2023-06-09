@@ -1,9 +1,13 @@
 import { configureStore, ThunkAction, Action } from '@reduxjs/toolkit';
-import counterReducer from '../features/counter/counterSlice';
+import budgetsReducer from './models/budgetsSlice';
+import collateralsReducer from './models/collateralsSlice';
+import loansReducer from './models/loansSlice';
 
 export const store = configureStore({
   reducer: {
-    counter: counterReducer,
+    budgets: budgetsReducer,
+    collaterals: collateralsReducer,
+    loans: loansReducer,
   },
 });
 
